@@ -1,0 +1,118 @@
+<?php $val = array (
+  'css' => '.module-banners-98 .swiper-container{overflow:hidden}.module-banners-98 .swiper-buttons{display:block;top:50%}.module-banners-98 .swiper-button-prev{left:0;right:auto;transform:translate(0, -50%)}.module-banners-98 .swiper-button-next{left:auto;right:0;transform:translate(0, -50%)}.module-banners-98 .swiper-buttons
+div{width:24px;height:24px;background:rgba(41, 41, 43, 1);box-shadow:0 5px 30px -5px rgba(0, 0, 0, 0.15)}.module-banners-98 .swiper-button-disabled{opacity:0}.module-banners-98 .swiper-buttons div::before{content:\'\\e5c4\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-banners-98 .swiper-buttons .swiper-button-next::before{content:\'\\e5c8\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-banners-98 .swiper-buttons div:not(.swiper-button-disabled):hover{background:rgba(208, 30, 36, 1)}.module-banners-98 .swiper-pagination{display:none;padding:10px;margin-bottom:-5px;left:50%;right:auto;transform:translateX(-50%)}.module-banners-98:hover .swiper-pagination{display:block}.module-banners-98
+.swiper{padding-bottom:20px}.module-banners-98 .swiper-pagination-bullet{width:20px;height:5px;background-color:rgba(41, 41, 43, 1)}.module-banners-98 .swiper-pagination>span+span{margin-left:5px}.desktop .module-banners-98 .swiper-pagination-bullet:hover{background-color:rgba(208, 30, 36, 1)}.module-banners-98 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color:rgba(208, 30, 36, 1)}.module-banners-98 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-banners-98 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-banners-98 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-banners-98 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-banners-98 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-banners-98 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-banners-98 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-banners-98 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-banners-98 a
+img{transform:scale(1)}.desktop .module-banners-98 a:hover
+img{transform:scale(1.15)}.module-banners-98 .module-item>a::before{background:rgba(10, 55, 143, 0.3)}.module-banners-98 a::before{opacity:0}.desktop .module-banners-98 a:hover::before{opacity:1}.module-banners-98 .module-item>a::after{content:\'\\e954\' !important;font-family:icomoon !important}.module-banners-98 .banner-caption{visibility:hidden;opacity:0;display:block}.desktop .module-banners-98 a:hover .banner-caption{visibility:visible;opacity:1}.module-banners-98 a .banner-caption{width:100%}.module-banners-98 .banner-caption
+span{color:rgba(255, 255, 255, 1);font-weight:700;text-align:center;text-transform:uppercase;padding:20px}@media (max-width: 1024px){.module-banners-98 .swiper-buttons{display:none !important}.module-banners-98 .swiper-pagination{display:block}}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'imageDimensions' => 
+    array (
+      'width' => 300,
+      'height' => 300,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'banners-667e0d8f42aeb',
+    'module_id' => 98,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-banners',
+      2 => 'module-banners-98',
+      'carousel-mode' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 500,
+      'autoplay' => false,
+      'pauseOnHover' => true,
+      'loop' => false,
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => '',
+        'title2' => '',
+        'title3' => '',
+        'alt' => '',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/thankyouteachergift/index.php?route=product/catalog',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '98-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'swiper-slide' => false,
+        ),
+        'image' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/banners/17-300x300.jpg',
+        'image2x' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/banners/17-600x600.jpg',
+        'text' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

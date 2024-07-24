@@ -1,0 +1,52 @@
+<?php $val = array (
+  'css' => '.module-layout_notice-241 .hn-close::before{content:\'\\e5cd\' !important;font-family:icomoon !important;font-size:20px;color:rgba(208, 30, 36, 1)}.module-layout_notice-241 .hn-close:hover::before{color:rgba(208, 30, 36, 1)}.module-layout_notice-241 .hn-close.btn, .module-layout_notice-241 .hn-close.btn:visited{font-size:12px;color:rgba(41, 41, 43, 1)}.module-layout_notice-241 .hn-close.btn:hover{color:rgba(208, 30, 36, 1) !important;background:none !important}.module-layout_notice-241 .hn-close.btn{background:none;padding:2px;padding-right:7px;padding-left:7px;box-shadow:none;min-width:20px;min-height:20px}.module-layout_notice-241 .hn-close.btn:active, .module-layout_notice-241 .hn-close.btn:hover:active, .module-layout_notice-241 .hn-close.btn:focus:active{background:none !important;box-shadow:none}.module-layout_notice-241 .hn-close.btn:focus{background:none;box-shadow:inset 0 0 20px rgba(0, 0, 0, 0.25)}.desktop .module-layout_notice-241 .hn-close.btn:hover{box-shadow:none}.module-layout_notice-241 .hn-close.btn.btn.disabled::after{font-size:20px}.module-layout_notice-241 .hn-close{margin-left:20px}.module-layout_notice-241 .module-body
+p{margin-bottom:0px}.module-layout_notice-241 .layout-notice-close-button{position:relative;top:auto;right:auto;bottom:auto;left:auto;transform:none}.module-layout_notice-241 .module-body{flex-direction:row}.module-layout_notice-241 .hn-content{text-align:center}.module-layout_notice-241 .hn-body::before{float:left;margin-right:7px}.module-layout_notice-241 .hn-body{display:block;padding-top:40px;padding-bottom:40px}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'cookie' => 'dd5a4d62',
+    'closeButton' => true,
+    'closeLink' => 
+    array (
+      'type' => NULL,
+      'id' => NULL,
+      'href' => '',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'closeText' => 'Close',
+    'content' => '<p>Upsell opportunity! Optionally display Related or Also Bought products based on those already in the cart. This is the Layout Notice module, it can be used to display any text or HTML content, in any position.</p>',
+    'status' => true,
+    'id' => 'layout_notice-667e277f83631',
+    'module_id' => 241,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-layout_notice',
+      2 => 'module-layout_notice-241',
+    ),
+    'options' => 
+    array (
+      'cookie' => 'dd5a4d62',
+      'ease' => 'easeOutQuart',
+      'duration' => '600',
+    ),
+    'items' => 
+    array (
+    ),
+  ),
+);

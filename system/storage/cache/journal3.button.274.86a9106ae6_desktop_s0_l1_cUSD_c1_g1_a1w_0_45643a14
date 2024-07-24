@@ -1,0 +1,43 @@
+<?php $val = array (
+  'css' => '.module-button-274
+.btn{transform:scale(calc(120 / 100));transform-origin:center;width:auto;margin-top:20px}.module-button-274{display:flex;justify-content:center}.module-button-274 .btn::after{content:\'\\e5c8\' !important;font-family:icomoon !important;margin-left:5px}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'See all products',
+    'link' => 
+    array (
+      'type' => 'page',
+      'id' => '51',
+      'href' => 'http://localhost/thankyouteachergift/index.php?route=product/catalog',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'status' => true,
+    'id' => 'button-667e0f012fb23',
+    'module_id' => 274,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-button',
+      2 => 'module-button-274',
+    ),
+    'items' => 
+    array (
+    ),
+  ),
+);

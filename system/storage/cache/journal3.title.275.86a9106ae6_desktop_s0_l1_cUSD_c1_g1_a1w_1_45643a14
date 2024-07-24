@@ -1,0 +1,44 @@
+<?php $val = array (
+  'css' => '.module-title-275
+.subtitle{display:inline-block;font-size:16px;border-radius:5px;max-width:700px}.module-title-275 .title-divider{display:block;max-width:50px;height:3px;background:rgba(208, 30, 36, 1);margin-top:15px;margin-bottom:15px;margin-left:auto;margin-right:auto;margin-left:auto;margin-right:auto}.module-title-275 .title-wrapper{text-align:center;text-align:center}.module-title-275
+h3{font-family:\'Playfair Display\';font-weight:400;font-size:40px;color:rgba(41, 41, 43, 1)}.module-title-275 .title-wrapper::before{opacity:.05}@media (max-width: 760px){.module-title-275
+h3{font-size:32px}}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Playfair Display' => 
+      array (
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'type' => 'custom',
+    'title' => 'The Bags Collection',
+    'subtitle' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+    'status' => true,
+    'id' => 'title-667d18b925552',
+    'module_id' => 275,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-title',
+      2 => 'module-title-275',
+    ),
+    'items' => 
+    array (
+    ),
+  ),
+);

@@ -1,0 +1,163 @@
+<?php $val = array (
+  'css' => '.module-master_slider-277::before{background-image:url(\'http://localhost/thankyouteachergift/image/cache/catalog/journal3/misc/overlay-3x3.png\')}.module-master_slider-277 .static-text-1{top:0;left:0;right:auto;bottom:auto;transform:none}.module-master_slider-277 .static-text-1
+span{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-277 .static-text-2{top:auto;left:0;right:auto;bottom:0;transform:translate3d(0, 0, 0)}.module-master_slider-277 .static-text-2
+span{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider>img{width:100%}.desktop .module-master_slider-277 .ms-nav-next{opacity:0}.desktop .module-master_slider-277 .ms-nav-prev{opacity:0}.desktop .module-master_slider-277 .ms-container:hover .ms-nav-next{opacity:1}.desktop .module-master_slider-277 .ms-container:hover .ms-nav-prev{opacity:1}.module-master_slider-277 .ms-nav-next{display:flex;left:auto;right:0;top:50%;bottom:auto;transform:translateY(-100%)}.module-master_slider-277 .ms-nav-prev{display:flex;left:auto;right:0;top:50%;bottom:auto;transform:translateY(0)}.module-master_slider-277 .ms-nav-next::before, .module-master_slider-277 .ms-nav-prev::before{content:\'\\e5c8\' !important;font-family:icomoon !important}.desktop .module-master_slider-277 .ms-nav-next:hover::before, .desktop .module-master_slider-277 .ms-nav-prev:hover::before{color:rgba(255, 255, 255, 1)}.module-master_slider-277 .ms-nav-next, .module-master_slider-277 .ms-nav-prev{width:40px;height:40px;background:rgba(237, 242, 254, 1)}.module-master_slider-277 .ms-nav-next:hover, .module-master_slider-277 .ms-nav-prev:hover{background:rgba(0, 138, 221, 1)}.desktop .module-master_slider-277 .ms-container .ms-bullets{opacity:0}.desktop .module-master_slider-277 .ms-container:hover .ms-bullets{opacity:1}.module-master_slider-277 .ms-bullets{display:block;top:auto;bottom:0;left:50%;right:auto;transform:translateX(-50%);;margin-top:20px;margin-bottom:20px}.module-master_slider-277 .ms-bullets .ms-bullets-count{flex-direction:row}.module-master_slider-277 .ms-bullets .ms-bullet{margin:calc(10px / 2) !important;background:rgba(41, 41, 43, 1)}.module-master_slider-277 .ms-bullet{width:30px;height:5px}.desktop .module-master_slider-277 .ms-bullets .ms-bullet:hover, .module-master_slider-277 .ms-bullets .ms-bullet-selected{background:rgba(208, 30, 36, 1)}.module-master_slider-277 .ms-thumb-list{display:block;padding:10px
+0;top:auto !important;bottom:0 !important;order:2}.module-master_slider-277 .ms-thumb-list .ms-thumb-frame{margin-right:10px !important;opacity: .75}.module-master_slider-277 .ms-thumb-frame{border-width:0px}.module-master_slider-277 .ms-timerbar{display:none;top:0 !important;bottom:auto !important}.module-master_slider-277 .master-slider .ms-time-bar{background-color:rgba(208, 30, 36, 1) !important;height:3px !important}@media (max-width: 1024px){.module-master_slider-277 .ms-nav-next{display:none}.module-master_slider-277 .ms-nav-prev{display:none}.module-master_slider-277 .ms-bullets{display:block}}@media (max-width: 760px){.module-master_slider-277 .ms-nav-next, .module-master_slider-277 .ms-nav-prev{width:30px;height:30px}}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'shuffle' => false,
+    'imageDimensions' => 
+    array (
+      'width' => 700,
+      'height' => 400,
+      'resize' => 'fill',
+    ),
+    'sliderDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'parallaxMode' => false,
+    'parallax' => '35',
+    'layout' => 'fillwidth',
+    'layoutTablet' => '',
+    'layoutPhone' => '',
+    'bottomOffset' => '',
+    'staticTextType' => 'text',
+    'staticTextLink' => 
+    array (
+      'type' => NULL,
+      'id' => NULL,
+      'href' => '',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'static2TextType' => 'text',
+    'static2TextLink' => 
+    array (
+      'type' => NULL,
+      'id' => NULL,
+      'href' => '',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'delay' => '2500',
+    'thumbnails' => false,
+    'thumbnailsDimensions' => 
+    array (
+      'width' => 50,
+      'height' => 50,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'master_slider-667d18b92b05e',
+    'module_id' => 277,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-master_slider',
+      2 => 'module-master_slider-277',
+      'fullscreen-slider' => false,
+    ),
+    'width' => 700,
+    'height' => 400,
+    'options' => 
+    array (
+      'width' => 700,
+      'height' => 400,
+      'layout' => 'fillwidth',
+      'smoothHeight' => false,
+      'centerControls' => false,
+      'parallaxMode' => 'swipe',
+      'instantStartLayers' => true,
+      'loop' => true,
+      'dir' => 'h',
+      'autoHeight' => true,
+      'rtl' => false,
+      'startOnAppear' => false,
+      'autoplay' => false,
+      'overPause' => true,
+      'shuffle' => false,
+      'view' => 'fadeBasic',
+      'speed' => '15',
+      'swipe' => true,
+      'mouse' => true,
+      'controls' => 
+      array (
+        'bullets' => 
+        array (
+          'autohide' => false,
+        ),
+        'timebar' => 
+        array (
+          'autohide' => false,
+          'inset' => true,
+          'align' => 'top',
+        ),
+      ),
+    ),
+    'first_image' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/slider/demo4/bag-700x400w.jpg',
+    'first_alt' => '',
+    'items' => 
+    array (
+      1 => 
+      array (
+        'type' => 'video',
+        'alt' => '',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '277-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          2 => 'ms-slide',
+        ),
+        'delay' => 2.5,
+        'image' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/slider/demo4/bag-700x400w.jpg',
+        'image2x' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/slider/demo4/bag-1400x800w.jpg',
+        'videoSrc' => 'image/catalog/journal3/videos/bag.mp4',
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+    'first_image2x' => 'http://localhost/thankyouteachergift/image/cache/catalog/journal3/slider/demo4/bag-1400x800w.jpg',
+  ),
+);

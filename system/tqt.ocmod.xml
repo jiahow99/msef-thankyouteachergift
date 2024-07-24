@@ -1,0 +1,513 @@
+<modification>
+	<name>TYT</name>
+	<version>1.0.0</version>
+	<code>tyt</code>
+	<author>Mices Technology</author>
+
+	<!-- All products controller modifications -->
+	<file path="catalog/controller/startup/startup.php">
+		<operation>
+			<search>
+				<![CDATA[
+				<?php
+				]]>
+			</search>
+			<add position="after">
+				<![CDATA[use tyt\TYT;
+use tyt\TYTModel;
+			]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				$this->registry->set('encryption', new Encryption($this->config->get('config_encryption')));
+				]]>
+			</search>
+			<add position="after">
+				<![CDATA[
+		// check if tyt user logged in
+		$tyt = new TYT($this->registry);
+		if (!$tyt->isLoggedIn()) {
+			$this->response->redirect('https://tap.thankyouteacher.my/login'); 
+		}
+		
+		$tyt_user = $tyt->getUser();
+		$tyt_model = new TYTModel($this->registry);
+		$customer = $tyt_model->getCustomerByTytUserId($tyt_user['id']);
+		$data = [];
+		
+		// check if oc customer exists, create user if doesnt exist
+		if (empty($customer)) {
+			$data = [
+				'customer_group_id' => 1,
+				'tyt_user_id' => $tyt_user['id'],
+				'firstname' => $tyt_user['name'],
+				'lastname' => '',
+				'email' => $tyt_user['email'],
+				'telephone' => $tyt_user['phone'],
+				'password' => 'password',
+				'newsletter' => 1,
+				'status' => 1,
+				'safe' => 1,
+			];
+
+			$tyt_model->addCustomer($data);
+			$customer = $tyt_model->getCustomerByTytUserId($tyt_user['id']);
+		}
+
+		if ($this->customer->isLogged()) {
+			if ($customer['customer_id'] != $this->customer->getId()) {
+				$this->customer->logout();
+
+				$this->customer->login($customer['email'], 'password');
+			}
+		} else {
+			$this->customer->login($customer['email'], 'password');
+		}]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- Header modifications -->
+    <file path="catalog/view/theme/journal3/template/common/header.twig">
+        <operation>
+			<search>
+				<![CDATA[
+					</head>
+				]]>
+			</search>
+			<add position="before">
+				<![CDATA[
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+					{{ j3.loadController('journal3/layout', 'header_notice') }}
+				]]>
+			</search>
+			<add position="after">
+				<![CDATA[		{% include 'journal3/template/journal3/headers/desktop/' ~ j3.settings.get('headerType') ~ '.twig' %}
+	{#]]>
+			</add>
+		</operation>
+		
+		<operation>
+			<search>
+				<![CDATA[
+					{{ j3.loadController('journal3/layout', 'fullscreen_slider') }}
+				]]>
+			</search>
+			<add position="before">
+				<![CDATA[	#}]]>
+			</add>
+		</operation>
+    </file>
+
+	<!-- Footer modifications -->
+	<file path="catalog/view/theme/journal3/template/common/footer.twig">
+        <operation>
+			<search>
+				<![CDATA[
+				</footer>
+				]]>
+			</search>
+			<add position="before">
+				<![CDATA[{% include 'journal3/template/common/tqt_footer.twig' %}]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				{{ footer_menu }}
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[
+{# {{ footer_menu }} #}]]>
+			</add>
+		</operation>
+    </file>
+
+	<!-- Header compact modifications -->
+	<file path="catalog/view/theme/journal3/template/journal3/headers/desktop/compact.twig">
+		<operation>
+			<search>
+				<![CDATA[
+				<div class="header header-compact header-sm">
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[{# <div class="header header-compact header-sm">]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				{{ cart }}
+				]]>
+			</search>
+			<add position="after" offset="4">
+				<![CDATA[#}
+{% include 'journal3/template/journal3/headers/desktop/tqt_header.twig' %}
+				]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- All products view modifications -->
+	<file path="catalog/view/theme/journal3/template/product/category.twig">
+		<operation>
+			<search index="0">
+				<![CDATA[
+					<ul class="breadcrumb">
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[{# <ul class="breadcrumb">]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+					</ul>
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[</ul> #}]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- Product detail controller modifications -->
+	<file path="catalog/controller/product/product.php">
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- Shopping cart controller modifications -->
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('common/home'),
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="0">
+				<![CDATA[
+				$data['continue'] = $this->url->link('common/home');
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[$data['continue'] = $this->url->link('product/catalog');]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="0">
+				<![CDATA[
+				$data['continue'] = $this->url->link('common/home');
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[$data['continue'] = $this->url->link('product/catalog');]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- Order history controller modifications -->
+	<file path="catalog/controller/account/order.php">
+		<operation>
+			<search index="0">
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="0">
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="0">
+				<![CDATA[
+				'text' => $this->language->get('text_account'),
+				]]>
+			</search>
+			<add position="before" offset="1">
+				<![CDATA[		/*]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="0">
+				<![CDATA[
+				'href' => $this->url->link('account/account', '', true)
+				]]>
+			</search>
+			<add position="after" offset="1">
+				<![CDATA[		*/]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="1">
+				<![CDATA[
+				'text' => $this->language->get('text_account'),
+				]]>
+			</search>
+			<add position="before" offset="1">
+				<![CDATA[			/*]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search index="1">
+				<![CDATA[
+				'href' => $this->url->link('account/account', '', true)
+				]]>
+			</search>
+			<add position="after" offset="1">
+				<![CDATA[			*/]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+					$data['column_right'] = $this->load->controller('common/column_right');
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[// $data['column_right'] = $this->load->controller('common/column_right');]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				$data['continue'] = $this->url->link('account/account', '', true);
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[$data['continue'] = $this->url->link('product/catalog', '', true);]]>
+			</add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/checkout/checkout.php">
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+	</file>
+
+	<file path="catalog/controller/account/wishlist.php">
+		<operation>
+			<search>
+				<![CDATA[
+					$data['column_right'] = $this->load->controller('common/column_right');
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[// $data['column_right'] = $this->load->controller('common/column_right');]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				'text' => $this->language->get('text_account'),
+				]]>
+			</search>
+			<add position="before" offset="1">
+				<![CDATA[		/*]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('account/account', '', true)
+				]]>
+			</search>
+			<add position="after" offset="1">
+				<![CDATA[		*/]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				$data['continue'] = $this->url->link('account/account', '', true);
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[$data['continue'] = $this->url->link('product/catalog', '', true);]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- compare product controller modifications -->
+	<file path="catalog/controller/product/compare.php">
+		<operation>
+			<search>
+				<![CDATA[
+				'href' => $this->url->link('common/home')
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA['href' => $this->url->link('product/catalog'),]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				$data['continue'] = $this->url->link('common/home');
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[$data['continue'] = $this->url->link('product/catalog');]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- all product page hide tags -->
+	<file path="catalog/view/theme/journal3/template/journal3/product_card.twig">
+		<operation>
+			<search>
+				<![CDATA[
+				{% if product.labels %}
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[{# {% if product.labels %}]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				{% if j3.settings.get('countdownStatus') and product.date_end %}
+				]]>
+			</search>
+			<add position="before">
+				<![CDATA[				#}
+				]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- remove home page manufacturer -->
+	<file path="catalog/view/theme/journal3/template/journal3/manufacturer_grid.twig">
+		<operation>
+			<search>
+				<![CDATA[
+				{% for manufacturer in manufacturers %}
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[{# {% for manufacturer in manufacturers %}]]>
+			</add>
+		</operation>
+
+		<operation>
+			<search>
+				<![CDATA[
+				{% endfor %}
+				]]>
+			</search>
+			<add position="replace">
+				<![CDATA[{% endfor %} #}]]>
+			</add>
+		</operation>
+	</file>
+
+	<!-- add to cart check if teacher is selected -->
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search>
+				<![CDATA[
+				<?php
+				]]>
+			</search>
+			<add position="after">
+				<![CDATA[use tyt\TYT;
+				]]>
+			</add>
+		</operation>
+		<!-- <operation>
+			<search>
+				<![CDATA[
+				if ($product_info) {
+				]]>
+			</search>
+			<add position="after">
+
+			</add>
+		</operation> -->
+	</file>
+
+	<file path="catalog/view/theme/journal3/js/common.js">
+		<!-- <operation>
+			<search>
+				<![CDATA[
+				$(document).on('click', '.product-thumb .quickview', function(e) {
+				]]>
+			</search>
+		</operation> -->
+	</file>
+</modification>

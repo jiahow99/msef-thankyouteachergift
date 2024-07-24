@@ -1,0 +1,12 @@
+2024-06-24 9:18:49 - PHP Notice:  Undefined property: tyt\TYT::$load in C:\xampp\htdocs\thankyouteachergift\system\library\tyt\tyt.php on line 45
+2024-06-24 9:19:37 - PHP Notice:  Undefined property: tyt\TYTModel::$db in C:\xampp\htdocs\thankyouteachergift\system\library\tyt\tytmodel.php on line 12
+2024-06-25 2:08:03 - PHP Notice:  Undefined index: safe in C:\xampp\htdocs\thankyouteachergift\system\library\tyt\tytmodel.php on line 12
+2024-06-25 3:15:02 - PHP Notice:  Undefined variable: data in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 43
+2024-06-25 3:15:02 - PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 43
+2024-06-25 3:15:02 - PHP Notice:  Undefined variable: data in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 43
+2024-06-25 3:15:02 - PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 43
+2024-06-25 3:16:30 - PHP Notice:  Undefined index: email in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 45
+2024-06-25 3:16:30 - PHP Notice:  Undefined index: password in C:\xampp\htdocs\thankyouteachergift\system\storage\modification\catalog\controller\product\catalog.php on line 45
+2024-06-25 8:33:19 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\thankyouteachergift\system\library\mail\mail.php on line 77
+2024-06-25 8:33:21 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\thankyouteachergift\system\library\mail\mail.php on line 77
+2024-06-28 8:00:04 - PHP Notice:  Undefined variable: layout in C:\xampp\htdocs\thankyouteachergift\catalog\controller\journal3\layout.php on line 306
